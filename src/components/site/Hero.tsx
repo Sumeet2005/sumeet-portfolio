@@ -82,7 +82,7 @@ export function Hero() {
                 <p className="font-mono-tech mt-1 text-xs text-muted-foreground">Building intelligent systems</p>
               </div>
               {heroStack.map((item, i) => {
-                const Icon = icons[i % icons.length];
+                const Icon = icons[i % icons.length]!;
                 return (
                   <div
                     key={item.title}
