@@ -3,6 +3,7 @@ import { ArrowRight, Boxes, Brain, Cpu, Database, LayoutPanelTop } from "lucide-
 import { capabilities } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { TiltCard } from "@/components/world/TiltCard";
 
 const icons = [Brain, Cpu, Database, LayoutPanelTop];
 
@@ -11,7 +12,7 @@ export function Capabilities() {
   const active = capabilities.find((c) => c.id === activeId)!;
 
   return (
-    <section id="capabilities" className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+    <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
       <Reveal>
         <SectionHeading index="03" kicker="capabilities_core" title="What I Can Build" />
       </Reveal>
@@ -61,7 +62,7 @@ export function Capabilities() {
         </Reveal>
 
         <Reveal delay={120}>
-          <article className="panel h-full p-6 sm:p-8">
+          <TiltCard as="article" className="holo-panel h-full p-6 sm:p-8">
             <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
               <span className="truncate">capability_logger // inspector</span>
               <span className="text-accent">engaged</span>
@@ -109,9 +110,9 @@ export function Capabilities() {
             <div className="font-mono-tech mt-8 flex items-center gap-2 text-[10px] text-muted-foreground uppercase">
               <Boxes className="h-3.5 w-3.5" aria-hidden /> core_run
             </div>
-          </article>
+          </TiltCard>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }

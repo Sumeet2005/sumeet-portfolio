@@ -2,10 +2,11 @@ import { Cpu, User } from "lucide-react";
 import { aboutFacts, aboutParagraphs, profile } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { TiltCard } from "@/components/world/TiltCard";
 
 export function About() {
   return (
-    <section id="about" className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+    <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
       <Reveal>
         <SectionHeading
           index="01"
@@ -17,7 +18,7 @@ export function About() {
 
       <div className="mt-14 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
         <Reveal>
-          <article className="panel h-full p-6 sm:p-8">
+          <TiltCard as="article" className="holo-panel h-full p-6 sm:p-8">
             <div className="font-mono-tech text-right text-[10px] text-muted-foreground uppercase">
               profile_core.json
             </div>
@@ -53,7 +54,7 @@ export function About() {
               <span>sys_init // boot_success</span>
               <span className="text-accent">secure_run</span>
             </div>
-          </article>
+          </TiltCard>
         </Reveal>
 
         <Reveal delay={120}>
@@ -71,7 +72,7 @@ export function About() {
               </p>
             ))}
 
-            <div className="panel mt-9 grid grid-cols-[auto_minmax(0,1fr)] gap-4 p-5">
+            <div className="holo-panel mt-9 grid grid-cols-[auto_minmax(0,1fr)] gap-4 p-5">
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-cyan/35 bg-cyan/10">
                 <Cpu className="h-5 w-5 text-accent" aria-hidden />
               </span>
@@ -87,6 +88,6 @@ export function About() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }

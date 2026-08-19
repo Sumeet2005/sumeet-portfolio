@@ -3,6 +3,7 @@ import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { profile } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { TiltCard } from "@/components/world/TiltCard";
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -18,7 +19,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+    <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
       <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
         <Reveal>
           <div>
@@ -30,7 +31,7 @@ export function Contact() {
               description="I'm open to discussing backend engineering roles, GenAI research integrations, full-stack applications, or custom machine learning pipelines."
             />
 
-            <div className="panel mt-8 p-5">
+            <div className="holo-panel mt-8 p-5">
               <p className="font-mono-tech flex items-center gap-2 text-xs text-accent uppercase">
                 <span className="h-2 w-2 rounded-full bg-accent animate-pulse-soft" />
                 status: available_for_opportunities
@@ -63,8 +64,9 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={120}>
+          <TiltCard className="h-full" max={4} lift={18}>
           <form
-            className="panel h-full p-6 sm:p-8"
+            className="holo-panel h-full p-6 sm:p-8"
             onSubmit={(e) => {
               e.preventDefault();
               window.location.href = mailto;
@@ -127,8 +129,9 @@ export function Contact() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
             </button>
           </form>
+          </TiltCard>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }

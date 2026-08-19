@@ -3,6 +3,7 @@ import { Activity, Briefcase, ChevronRight } from "lucide-react";
 import { careerTabs } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { TiltCard } from "@/components/world/TiltCard";
 
 export function Experience() {
   const [tabId, setTabId] = useState(careerTabs[0]!.id);
@@ -11,7 +12,7 @@ export function Experience() {
   const facet = tab.facets[Math.min(facetIdx, tab.facets.length - 1)]!;
 
   return (
-    <section id="experience" className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+    <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
       <Reveal>
         <SectionHeading
           index="06"
@@ -61,7 +62,7 @@ export function Experience() {
         </Reveal>
 
         <Reveal delay={120}>
-          <article className="panel h-full p-6 sm:p-8">
+          <TiltCard as="article" className="holo-panel h-full p-6 sm:p-8">
             <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
               <span className="truncate">record_view // exp_log</span>
               <span className="text-accent">{tab.verified}</span>
@@ -118,9 +119,9 @@ export function Experience() {
                 <Activity className="h-3.5 w-3.5" aria-hidden /> core_run
               </span>
             </div>
-          </article>
+          </TiltCard>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }
