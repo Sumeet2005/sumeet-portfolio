@@ -1,5 +1,3 @@
-<<<<<<<<
-import { useEffect, useState } from "react";
 import { Github, FileText, Menu, X } from "lucide-react";
 import { profile } from "@/data/portfolio";
 
@@ -133,4 +131,3 @@ export function Nav() {
     </header>
   );
 }
->>>>>>>>
