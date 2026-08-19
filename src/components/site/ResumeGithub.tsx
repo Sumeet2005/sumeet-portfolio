@@ -1,13 +1,14 @@
 import { ArrowUpRight, Download, FileText, Github } from "lucide-react";
 import { profile } from "@/data/portfolio";
 import { Reveal } from "./Reveal";
+import { TiltCard } from "@/components/world/TiltCard";
 
 export function ResumeGithub() {
   return (
-    <section id="resume" className="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
+    <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
       <div className="grid gap-6 lg:grid-cols-2">
         <Reveal>
-          <article className="panel h-full p-6 sm:p-8">
+          <TiltCard as="article" className="holo-panel h-full p-6 sm:p-8">
             <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
               <span className="truncate">01 / source_code</span>
               <span className="text-accent">active_repos</span>
@@ -31,11 +32,11 @@ export function ResumeGithub() {
               Explore My Code
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden />
             </a>
-          </article>
+          </TiltCard>
         </Reveal>
 
         <Reveal delay={120}>
-          <article className="panel h-full p-6 sm:p-8">
+          <TiltCard as="article" className="holo-panel h-full p-6 sm:p-8">
             <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
               <span className="truncate">02 / engineering_profile</span>
               <span className="text-violet">portable_doc</span>
@@ -57,9 +58,9 @@ export function ResumeGithub() {
               <Download className="h-4 w-4 shrink-0" aria-hidden />
               Download PDF Resume
             </a>
-          </article>
+          </TiltCard>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }

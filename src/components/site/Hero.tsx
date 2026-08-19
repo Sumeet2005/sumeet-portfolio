@@ -6,7 +6,7 @@ const icons = [Search, Brain, Bot, Database, Layers, Zap];
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
+    <div className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_at_50%_0%,black,transparent_72%)]" />
       <div className="pointer-events-none absolute -top-40 left-1/3 h-[28rem] w-[28rem] rounded-full bg-violet/18 blur-[120px]" />
       <div className="pointer-events-none absolute top-24 right-0 h-[24rem] w-[24rem] rounded-full bg-cyan/12 blur-[120px]" />
@@ -75,7 +75,7 @@ export function Hero() {
           <div className="relative">
             <div className="pointer-events-none absolute inset-8 rounded-full bg-violet/12 blur-3xl" />
             <div className="relative grid grid-cols-2 gap-3 sm:grid-cols-3">
-              <div className="panel order-first col-span-2 p-5 text-center sm:order-none sm:col-span-3" style={{ boxShadow: "var(--glow-violet)" }}>
+              <div className="holo-panel order-first col-span-2 p-5 text-center sm:order-none sm:col-span-3" style={{ boxShadow: "var(--glow-violet)" }}>
                 <p className="font-mono-tech text-[10px] text-violet uppercase">Sumeet's AI engineering stack</p>
                 <Brain className="mx-auto mt-3 h-8 w-8 text-accent" aria-hidden />
                 <h2 className="mt-3 font-display text-xl font-bold">AI ENGINE</h2>
@@ -86,7 +86,7 @@ export function Hero() {
                 return (
                   <div
                     key={item.title}
-                    className="panel group p-4 transition-all duration-300 hover:-translate-y-1 hover:border-cyan/45"
+                    className="holo-panel group p-4 transition-all duration-300 hover:-translate-y-1 hover:border-cyan/45"
                   >
                     <Icon className="h-5 w-5 text-accent transition-transform group-hover:scale-110" aria-hidden />
                     <h3 className="font-mono-tech mt-4 text-xs font-bold uppercase">{item.title}</h3>
@@ -98,6 +98,6 @@ export function Hero() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }

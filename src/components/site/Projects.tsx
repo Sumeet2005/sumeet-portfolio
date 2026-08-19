@@ -3,13 +3,14 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { profile, projects } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { TiltCard } from "@/components/world/TiltCard";
 
 export function Projects() {
   const [activeId, setActiveId] = useState(projects[0]!.id);
   const active = projects.find((p) => p.id === activeId)!;
 
   return (
-    <section id="projects" className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+    <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
       <Reveal>
         <SectionHeading index="05" kicker="portfolio_index" title="Featured Projects" />
       </Reveal>
@@ -52,7 +53,7 @@ export function Projects() {
         </Reveal>
 
         <Reveal delay={120}>
-          <article className="panel flex h-full flex-col p-6 sm:p-8">
+          <TiltCard as="article" className="holo-panel flex h-full flex-col p-6 sm:p-8">
             <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
               <span className="truncate">case_study // project_{active.id}</span>
               <span className="text-accent">log</span>
@@ -98,9 +99,9 @@ export function Projects() {
                 Repo
               </a>
             </div>
-          </article>
+          </TiltCard>
         </Reveal>
       </div>
-    </section>
+    </div>
   );
 }
