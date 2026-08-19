@@ -49,7 +49,7 @@ export function Nav() {
     >
       <nav
         aria-label="Primary"
-        className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-8"
       >
         <a href="#home" className="min-w-0 truncate font-display text-lg font-bold tracking-tight">
           SUMEET <span className="text-violet">SONAR</span>
