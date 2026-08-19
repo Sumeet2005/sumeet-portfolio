@@ -248,3 +248,185 @@
     transform: none;
   }
 }
+
+/* ------------------------------------------------------------------
+   3D WORLD LAYER
+   A single shared CSS camera wraps the whole document. Sections become
+   "rooms" positioned in Z, the WebGL environment lives behind them.
+------------------------------------------------------------------- */
+
+.world-root {
+  position: relative;
+  min-height: 100vh;
+}
+
+.world-env {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.world-sky {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% -10%, oklch(0.72 0.16 285 / 22%), transparent 60%),
+    radial-gradient(ellipse at 85% 30%, oklch(0.82 0.13 200 / 12%), transparent 55%),
+    radial-gradient(ellipse at 10% 80%, oklch(0.72 0.16 285 / 12%), transparent 55%),
+    var(--background);
+}
+
+.world-horizon {
+  position: absolute;
+  inset-inline: -20%;
+  bottom: -6%;
+  height: 34%;
+  background: linear-gradient(to top, oklch(0.82 0.13 200 / 10%), transparent);
+  filter: blur(30px);
+}
+
+.world-canvas {
+  position: absolute !important;
+  inset: 0;
+}
+
+.world-static-grid {
+  position: absolute;
+  inset: -10%;
+  background-image:
+    linear-gradient(oklch(0.82 0.13 200 / 8%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.82 0.13 200 / 8%) 1px, transparent 1px);
+  background-size: 54px 54px;
+  transform: perspective(600px) rotateX(62deg);
+  transform-origin: 50% 100%;
+  mask-image: linear-gradient(to top, black, transparent 70%);
+}
+
+.world-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 45%, var(--background) 100%);
+  opacity: 0.85;
+}
+
+.world-viewport {
+  position: relative;
+  z-index: 1;
+  perspective: 1400px;
+  perspective-origin: 50% 45%;
+  transform-style: preserve-3d;
+}
+
+.stage {
+  position: relative;
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+}
+
+.stage-room {
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.plane {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@utility tilt-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  will-change: transform;
+
+  &:hover {
+    box-shadow:
+      0 30px 70px -30px oklch(0.72 0.16 285 / 55%),
+      0 0 0 1px oklch(0.82 0.13 200 / 25%);
+  }
+}
+
+.tilt-sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    340px circle at var(--mx, 50%) var(--my, 50%),
+    oklch(0.82 0.13 200 / 14%),
+    transparent 65%
+  );
+}
+
+.tilt-card:hover .tilt-sheen {
+  opacity: 1;
+}
+
+/* depth chrome for panels living inside the world */
+@utility holo-panel {
+  background: var(--gradient-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  backdrop-filter: blur(14px) saturate(130%);
+  box-shadow:
+    0 40px 80px -50px oklch(0.05 0 0 / 90%),
+    inset 0 1px 0 oklch(1 0 0 / 6%);
+}
+
+/* skills universe */
+.orbit-scene {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid oklch(0.82 0.13 200 / 16%);
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateZ(0) translateY(0);
+  }
+  50% {
+    transform: translateZ(24px) translateY(-8px);
+  }
+}
+
+@utility animate-float-soft {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+.corridor-track {
+  transform-style: preserve-3d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-room,
+  .plane,
+  .tilt-card {
+    transform: none !important;
+    transition: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
