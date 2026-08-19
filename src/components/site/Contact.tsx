@@ -3,6 +3,7 @@ import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { profile } from "@/data/portfolio";
 import { SectionHeading } from "./SectionHeading";
 import { Reveal } from "./Reveal";
+import { TiltCard } from "@/components/world/TiltCard";
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -63,6 +64,7 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={120}>
+          <TiltCard className="h-full" max={4} lift={18}>
           <form
             className="holo-panel h-full p-6 sm:p-8"
             onSubmit={(e) => {
@@ -127,6 +129,7 @@ export function Contact() {
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
             </button>
           </form>
+          </TiltCard>
         </Reveal>
       </div>
     </div>
