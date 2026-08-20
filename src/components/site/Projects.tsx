@@ -17,7 +17,7 @@ export function Projects() {
 
       <div className="mt-14 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
         <Reveal>
-          <div role="tablist" aria-label="Projects" className="grid gap-3">
+          <div role="tablist" aria-label="Projects" className="grid gap-3" style={{ transformStyle: "preserve-3d", perspective: "900px" }}>
             {projects.map((p) => {
               const selected = p.id === activeId;
               return (
@@ -27,6 +27,12 @@ export function Projects() {
                   role="tab"
                   aria-selected={selected}
                   onClick={() => setActiveId(p.id)}
+                  style={{
+                    transform: selected
+                      ? "translateZ(70px) rotateY(-2deg)"
+                      : `translateZ(${-Math.abs(projects.indexOf(p) - projects.findIndex((x) => x.id === activeId)) * 16}px)`,
+                    transformStyle: "preserve-3d",
+                  }}
                   className={`grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border p-4 text-left transition-all duration-300 ${
                     selected
                       ? "border-cyan/50 bg-cyan/6 glow-ring"
