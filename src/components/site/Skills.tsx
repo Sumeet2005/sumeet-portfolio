@@ -40,7 +40,30 @@ export function Skills() {
       <div className="mt-16 grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
         {/* orbital selector */}
         <Reveal>
-          <div className="orbit-scene relative mx-auto aspect-square w-full max-w-[26rem] scale-[0.78] overflow-hidden sm:scale-100">
+          {/* compact spatial selector for small screens */}
+          <div className="grid grid-cols-2 gap-2.5 sm:hidden" style={{ perspective: "700px" }}>
+            {skillGroups.map((g, i) => {
+              const selected = i === active;
+              return (
+                <button
+                  key={g.title}
+                  type="button"
+                  aria-pressed={selected}
+                  onClick={() => setActive(i)}
+                  className={`font-mono-tech rounded-xl border px-3 py-3 text-left text-[10px] uppercase transition-all duration-300 ${
+                    selected
+                      ? "border-cyan/60 bg-cyan/12 text-accent glow-ring"
+                      : "border-border bg-surface/85 text-muted-foreground"
+                  }`}
+                  style={{ transform: `translateZ(${selected ? 26 : 0}px)` }}
+                >
+                  {g.title}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="orbit-scene relative mx-auto hidden aspect-square w-full max-w-[26rem] sm:block">
             <div
               ref={ring}
               className="absolute inset-0"
