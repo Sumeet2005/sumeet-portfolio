@@ -446,3 +446,36 @@ body {
     perspective: 1000px;
   }
 }
+
+/* Mobile / reduced-power fallback world: CSS-perspective corridor */
+.world-static-grid {
+  opacity: 0.85;
+  animation: grid-travel 14s linear infinite;
+}
+
+.world-static-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(oklch(0.72 0.16 285 / 8%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.72 0.16 285 / 8%) 1px, transparent 1px);
+  background-size: 54px 54px;
+  transform: scaleY(-1);
+  mask-image: linear-gradient(to bottom, black, transparent 65%);
+}
+
+@keyframes grid-travel {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 54px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .world-static-grid {
+    animation: none;
+  }
+}
