@@ -101,7 +101,7 @@ function Landmarks() {
     () =>
       Array.from({ length: 9 }, (_, i) => ({
         z: -18 - i * 30,
-        x: (i % 2 === 0 ? -1 : 1) * (11 + (i % 3) * 3),
+        x: (i % 2 === 0 ? -1 : 1) * (19 + (i % 3) * 4),
         y: ((i % 3) - 1) * 4,
         s: 1.6 + (i % 4) * 0.7,
         c: i % 2 === 0 ? CYAN : VIOLET,
@@ -136,7 +136,7 @@ function Landmarks() {
             color={n.c}
             wireframe
             transparent
-            opacity={0.35}
+            opacity={0.22}
             blending={THREE.AdditiveBlending}
             depthWrite={false}
           />
