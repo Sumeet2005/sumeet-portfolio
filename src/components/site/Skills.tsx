@@ -40,7 +40,7 @@ export function Skills() {
       <div className="mt-16 grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
         {/* orbital selector */}
         <Reveal>
-          <div className="orbit-scene relative mx-auto aspect-square w-full max-w-[26rem]">
+          <div className="orbit-scene relative mx-auto aspect-square w-full max-w-[26rem] scale-[0.78] overflow-hidden sm:scale-100">
             <div
               ref={ring}
               className="absolute inset-0"
