@@ -46,12 +46,12 @@ export function Stage({
       return;
     }
 
-    const z = -a * depth;
+    const z = -Math.max(0, a - 0.15) * depth;
     const rotX = -p * tilt;
     const rotY = world.sx * 2.2;
     const y = p * 26;
     box.style.transform = `translate3d(${world.sx * 10}px, ${y}px, ${z}px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-    box.style.opacity = String(Math.max(0, 1 - Math.max(0, a - 0.25) * 1.25));
+    box.style.opacity = String(Math.max(0.12, 1 - Math.max(0, a - 0.55) * 1.5));
   });
 
   return (

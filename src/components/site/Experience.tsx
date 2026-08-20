@@ -24,7 +24,7 @@ export function Experience() {
 
       <div className="mt-14 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
         <Reveal>
-          <div role="tablist" aria-label="Career records" className="grid gap-3">
+          <div role="tablist" aria-label="Career records" className="corridor-track grid gap-3" style={{ perspective: "900px" }}>
             {careerTabs.map((t) => {
               const selected = t.id === tabId;
               return (
@@ -37,7 +37,11 @@ export function Experience() {
                     setTabId(t.id);
                     setFacetIdx(0);
                   }}
-                  className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border p-5 text-left transition-all duration-300 ${
+                  style={{
+                    transform: selected ? "translateZ(64px)" : "translateZ(-18px) rotateX(4deg)",
+                    transformStyle: "preserve-3d",
+                  }}
+                  className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border p-5 text-left transition-all duration-500 ${
                     selected
                       ? "border-cyan/50 bg-cyan/6 glow-ring"
                       : "border-border bg-surface hover:border-cyan/30 hover:bg-surface-raised"

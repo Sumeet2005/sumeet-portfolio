@@ -10,6 +10,8 @@ import { ResumeGithub } from "@/components/site/ResumeGithub";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { profile } from "@/data/portfolio";
+import { WorldShell } from "@/components/world/WorldShell";
+import { Stage } from "@/components/world/Stage";
 
 const title = "Sumeet Sonar — AI Engineer | Building Intelligent Systems With AI";
 const description =
@@ -50,19 +52,35 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
+    <WorldShell>
       <Nav />
       <main>
-        <Hero />
-        <About />
-        <Capabilities />
-        <Skills />
-        <Projects />
-        <Experience />
-        <ResumeGithub />
-        <Contact />
+        <Stage id="home" depth={420} tilt={5}>
+          <Hero />
+        </Stage>
+        <Stage id="about" depth={700}>
+          <About />
+        </Stage>
+        <Stage id="capabilities" depth={760} tilt={11}>
+          <Capabilities />
+        </Stage>
+        <Stage id="skills" depth={820} tilt={8}>
+          <Skills />
+        </Stage>
+        <Stage id="projects" depth={880} tilt={10}>
+          <Projects />
+        </Stage>
+        <Stage id="experience" depth={820} tilt={12}>
+          <Experience />
+        </Stage>
+        <Stage id="resume" depth={700} tilt={9}>
+          <ResumeGithub />
+        </Stage>
+        <Stage id="contact" depth={620} tilt={7}>
+          <Contact />
+        </Stage>
       </main>
       <Footer />
-    </div>
+    </WorldShell>
   );
 }
