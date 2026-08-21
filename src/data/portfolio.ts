@@ -4,11 +4,12 @@ export const profile = {
   subtitle: "AI & Backend Engineer",
   location: "Navi Mumbai, India",
   email: "sonarsumeet10@gmail.com",
+  phone: "+91 8624880655",
   github: "https://github.com/Sumeet2005",
   linkedin: "https://www.linkedin.com/in/sumeet-sonar",
   tagline: "Building Intelligent Systems With AI",
   intro:
-    "Information Technology graduate building AI-powered, backend and full-stack applications.",
+    "Bachelor of Engineering in Information Technology graduate specializing in AI Engineering and Backend Engineering.",
 };
 
 export const heroStack = [
@@ -21,77 +22,77 @@ export const heroStack = [
 ];
 
 export const aboutFacts = [
-  { key: "<status>", value: "Available for contracts" },
-  { key: "<focus>", value: "LLMs & Agentic RAG" },
-  { key: "<degree>", value: "B.Sc. Info Technology" },
+  { key: "<status>", value: "Available for contract & full-time roles" },
+  { key: "<focus>", value: "LLMs, Agentic RAG & Backend APIs" },
+  { key: "<degree>", value: "B.E. Information Technology (CGPA: 7.63)" },
 ];
 
 export const aboutParagraphs = [
-  "As an IT graduate, I bridge the gap between heavy software systems and intelligent models. I build scalable full-stack applications with FastAPI, Django, and React, integrating structured semantic searches with ChromaDB, orchestration frameworks like LangChain/LangGraph, and custom multi-provider LLM setups (OpenAI, Gemini, Groq).",
-  "My hands-on experience spans machine learning implementations, NLP data workflows, token caching, WebSockets integrations, and custom role-based access control. I strive to build reliable, grounded systems that solve actual domain problems.",
+  "As a Bachelor of Engineering in IT graduate, I bridge the gap between software backends and intelligent models. I build scalable full-stack applications with FastAPI, Django, and React, integrating structured semantic searches with ChromaDB, orchestration frameworks like LangChain and LangGraph, and multi-provider LLM routing (OpenAI, Gemini, Groq, Ollama, Hugging Face).",
+  "My hands-on experience spans machine learning pipelines, NLP data workflows, token caching, WebSockets telemetry, Solidity smart contract verification, and role-based access control (RBAC). I focus on building reliable, grounded systems that solve actual domain problems.",
 ];
 
 export const capabilities = [
   {
     id: "ml",
     title: "AI & Machine Learning",
-    tech: "PYTHON • SCIKIT-LEARN • STREAMLIT",
+    tech: "PYTHON • SCIKIT-LEARN • STREAMLIT • XGBOOST",
     statement:
       "Developing robust machine learning pipelines, data preprocessing, and model evaluations.",
     points: [
-      "Data preprocessing, cleaning, and features extraction",
-      "Traditional ML pipeline implementation (Classification, Regression)",
-      "Model testing, debugging, and metrics evaluation (F1, AUC, accuracy)",
+      "Data preprocessing, cleaning, feature engineering, and exploratory data analysis (EDA)",
+      "Classification & regression pipeline implementation using Scikit-learn and XGBoost",
+      "Model testing, debugging, and metrics evaluation (F1, ROC/AUC, accuracy)",
     ],
-    stack: ["Python", "Scikit-learn", "Streamlit", "NLP"],
-    related: "Smart AI Resume Analyzer",
+    stack: ["Python", "Scikit-learn", "XGBoost", "Streamlit", "NLP", "Pandas", "NumPy"],
+    related: "Smart AI Resume Analyzer with Blockchain Certificate Verification",
   },
   {
     id: "genai",
     title: "Generative AI & RAG",
-    tech: "PYTHON • CHROMADB • BM25",
+    tech: "PYTHON • CHROMADB • BM25 • LANGCHAIN • LANGGRAPH",
     statement:
       "Designing grounded retrieval pipelines that keep LLM output accurate and source-backed.",
     points: [
-      "Hybrid retrieval with semantic search and BM25 reranking",
-      "Agentic orchestration with LangChain and LangGraph",
-      "Multi-provider LLM routing (OpenAI, Gemini, Groq, Hugging Face)",
+      "Hybrid retrieval combining BM25 keyword matching and dense ChromaDB vector search with cross-encoder reranking",
+      "Agentic orchestration with LangChain and LangGraph state machines",
+      "Multi-provider LLM integration layer (OpenAI, Gemini, Groq, Ollama, Hugging Face)",
     ],
-    stack: ["ChromaDB", "LangChain", "LangGraph", "BM25"],
+    stack: ["ChromaDB", "LangChain", "LangGraph", "BM25", "Hugging Face", "Ollama"],
     related: "IntelliICU",
   },
   {
     id: "backend",
     title: "Backend & AI Systems",
-    tech: "FASTAPI • DJANGO • POSTGRESQL",
+    tech: "FASTAPI • DJANGO • POSTGRESQL • WEBSOCKETS",
     statement:
       "Engineering resilient service layers that carry AI workloads into production safely.",
     points: [
-      "REST APIs with FastAPI and Django, SQLAlchemy and Alembic migrations",
-      "Realtime telemetry via WebSockets and token caching layers",
-      "JWT auth with custom role-based access control",
+      "REST APIs with FastAPI and Django, SQLAlchemy ORM and Alembic schema migrations",
+      "Real-time patient & metric telemetry via active WebSockets connections",
+      "JWT authentication with custom Role-Based Access Control (RBAC)",
     ],
-    stack: ["FastAPI", "Django", "PostgreSQL", "WebSockets"],
+    stack: ["FastAPI", "Django", "PostgreSQL", "SQLAlchemy", "Alembic", "WebSockets", "JWT", "RBAC"],
     related: "PharmacoGuard",
   },
   {
     id: "fullstack",
-    title: "Full-Stack Engineering",
-    tech: "REACT • TYPESCRIPT • TAILWIND CSS",
+    title: "Full-Stack & Web3 Engineering",
+    tech: "REACT • TYPESCRIPT • SOLIDITY • DOCKER",
     statement:
-      "Shipping clean front-end architectures that make intelligent systems usable.",
+      "Shipping clean front-end architectures and Web3 integrations that make intelligent systems usable.",
     points: [
-      "Component-driven React interfaces with TypeScript",
-      "Dashboards for realtime metrics and analytics",
-      "Deployment with Docker, GitHub Actions, Nginx and Railway",
+      "Component-driven React interfaces with TypeScript & Tailwind CSS",
+      "Blockchain-backed certificate verification using Solidity smart contracts & Web3",
+      "Deployment & containerization with Docker, GitHub Actions, Nginx and Railway",
     ],
-    stack: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    stack: ["React", "TypeScript", "Solidity", "Web3", "Docker", "GitHub Actions", "Railway"],
     related: "Atlas",
   },
 ];
 
 export const skillGroups = [
-  { title: "Languages", items: ["Python", "Java", "SQL", "JavaScript", "TypeScript", "HTML", "CSS"] },
+  { title: "Languages", items: ["Python", "Java", "SQL", "JavaScript", "TypeScript", "HTML", "CSS", "Solidity"] },
   {
     title: "AI & GenAI",
     items: [
@@ -104,40 +105,57 @@ export const skillGroups = [
       "Prompt Engineering",
       "Semantic Search",
       "ChromaDB",
-      "Multi-provider LLM integration",
+      "Multi-provider LLM Integration",
+      "Sentence Transformers",
     ],
   },
   {
     title: "Backend Systems",
-    items: ["FastAPI", "Django", "REST APIs", "SQLAlchemy", "Alembic", "WebSockets", "JWT", "RBAC"],
+    items: ["FastAPI", "Django", "Async APIs", "REST APIs", "SQLAlchemy", "Alembic", "WebSockets", "JWT", "RBAC"],
   },
-  { title: "Frontend", items: ["React", "Vite", "Streamlit"] },
+  { title: "Frontend & Web3", items: ["React", "Vite", "Streamlit", "Web3.js", "Solidity Smart Contracts"] },
   {
     title: "ML & Data Sci",
-    items: ["Scikit-learn", "Pandas", "NumPy", "Feature Engineering", "Model Evaluation"],
+    items: ["Scikit-learn", "XGBoost", "Pandas", "NumPy", "Feature Engineering", "Model Evaluation", "EDA"],
   },
   { title: "Databases", items: ["PostgreSQL", "MySQL", "Oracle SQL"] },
   {
     title: "DevOps & Tools",
-    items: ["Git", "GitHub", "Docker", "Docker Compose", "GitHub Actions", "Railway", "Nginx"],
+    items: ["Git", "GitHub", "Docker", "Docker Compose", "GitHub Actions", "Railway", "Nginx", "Jupyter Notebook", "Power BI"],
   },
   { title: "LLM Integration", items: ["OpenAI", "Gemini", "Groq", "Hugging Face", "Ollama"] },
 ];
 
-export const projects = [
+export interface Project {
+  id: string;
+  name: string;
+  kicker: string;
+  category: string;
+  summary: string;
+  features: string[];
+  stack: string[];
+  github: string;
+  extendedDesc?: string;
+  verificationWorkflow?: string[];
+}
+
+export const projects: Project[] = [
   {
     id: "01",
     name: "IntelliICU",
-    kicker: "AI Clinical Copilot",
+    kicker: "AI Clinical Copilot & Hospital Platform",
     category: "AI Clinical Copilot & Healthcare Platform",
     summary:
-      "Real-time clinical monitoring platform leveraging active WebSocket telemetries and RAG clinical queries.",
+      "Real-time clinical decision support platform leveraging active WebSocket telemetries and RAG clinical queries.",
     features: [
-      "Real-time patient monitoring & metrics telemetry via active WebSockets connection.",
-      "Grounded, source-backed clinical answers using RAG extraction architectures.",
-      "Configurable multi-provider LLM integrations (OpenAI, Gemini, Groq, Hugging Face).",
+      "Engineered an AI-powered clinical decision support system using FastAPI, LangChain, ChromaDB, and Retrieval-Augmented Generation (RAG).",
+      "Architected a configurable multi-provider LLM integration layer supporting OpenAI, Gemini, Ollama, and Hugging Face models.",
+      "Secured the platform with JWT Authentication and RBAC, added WebSockets for real-time updates, and deployed async FastAPI endpoints on Railway.",
     ],
-    stack: ["React", "FastAPI", "PostgreSQL", "LangChain", "ChromaDB", "WebSockets", "Docker", "JWT"],
+    stack: ["React", "FastAPI", "PostgreSQL", "LangChain", "ChromaDB", "WebSockets", "Docker", "JWT", "Railway"],
+    github: "https://github.com/Sumeet2005/IntelliICU",
+    extendedDesc:
+      "IntelliICU addresses critical healthcare latency issues by feeding active telemetry data directly to full-stack pipelines. The platform coordinates query parsing, chunk overrides, and embedding index validations via secure ChromaDB storage, allowing doctors to get grounded answers scoped to patient records.",
   },
   {
     id: "02",
@@ -145,41 +163,57 @@ export const projects = [
     kicker: "AI Knowledge Workspace",
     category: "Agentic Knowledge Workspace",
     summary:
-      "A knowledge workspace that ingests documents and answers questions with grounded, cited context.",
+      "Intelligent search workspace featuring hybrid semantic matching and cross-encoder rerankers for document Q&A.",
     features: [
-      "Document ingestion pipelines with chunking and semantic indexing.",
-      "Agentic orchestration over tools with LangGraph.",
-      "Workspace UI for browsing sources alongside generated answers.",
+      "Flexible document ingestion with multi-format parsing pipelines for documents, PDFs, and text scripts.",
+      "Advanced hybrid retrieval combining keyword matching (BM25) and dense semantic vector search (ChromaDB) with cross-encoder reranking.",
+      "Fully grounded question answering with context scoping, token caching, and token telemetry tracking.",
     ],
-    stack: ["React", "FastAPI", "ChromaDB", "LangGraph", "PostgreSQL"],
+    stack: ["Python", "FastAPI", "React", "TypeScript", "ChromaDB", "BM25", "LangGraph", "PostgreSQL", "Nginx"],
+    github: "https://github.com/Sumeet2005/AI-Knowledge-Chatbot",
+    extendedDesc:
+      "Atlas is a developer-centric workspace that structures complex files, PDFs, and text scripts into semantic vectors. It combines lexical index scoring (BM25) with dense semantic search blocks to ensure high-accuracy document reranking under low latency.",
   },
   {
     id: "03",
     name: "PharmacoGuard",
-    kicker: "AI-Powered Complaint Management System",
+    kicker: "AI-Powered Pharmaceutical Complaint Management System",
     category: "Pharma Complaint Intelligence",
     summary:
-      "Complaint management system that classifies, routes and summarises pharmacovigilance reports.",
+      "State machine complaint routing agent built on LangGraph workflows and PostgreSQL schemas for pharmacovigilance.",
     features: [
-      "Automated complaint classification and severity triage.",
-      "Role-based access control across reviewer workflows.",
-      "Audit-friendly reporting with structured summaries.",
+      "Engineered an AI-powered complaint management system using LangGraph, FastAPI, PostgreSQL, and Groq LLM.",
+      "Designed AI workflows for automated complaint classification, risk assessment, semantic duplicate search, and summarization.",
+      "Built REST APIs with full database migrations setup using Alembic and PostgreSQL data persistence, integrated into a React web app.",
     ],
-    stack: ["Django", "PostgreSQL", "Python", "RBAC", "NLP"],
+    stack: ["FastAPI", "Django", "PostgreSQL", "LangGraph", "Groq LLM", "SQLAlchemy", "Alembic", "React", "Python"],
+    github: "https://github.com/Sumeet2005/ai-pharmaceutical-complaint-system",
+    extendedDesc:
+      "PharmacoGuard automates manual risk reviews in regulated setups. It maps incoming tickets through state machines using LangGraph, evaluating complaint severity and duplicate classification, persisting logs securely to PostgreSQL layers.",
   },
   {
     id: "04",
-    name: "Smart AI Resume Analyzer",
-    kicker: "HR Tech",
-    category: "Resume Intelligence",
+    name: "Smart AI Resume Analyzer with Blockchain Certification",
+    kicker: "HR Tech & Web3 Certificate Verification System",
+    category: "HR Tech & Blockchain Verification System",
     summary:
-      "NLP-driven resume screening that scores candidates against role requirements.",
+      "Intelligent resume analysis combined with Web3-integrated Solidity smart contracts for tamper-resistant academic certificate verification.",
     features: [
-      "Resume parsing with feature extraction and skill matching.",
-      "Scoring models evaluated on F1, AUC and accuracy.",
-      "Streamlit interface for recruiter-side review.",
+      "Engineered an NLP pipeline for resume parsing, feature extraction, candidate ranking, and skill-gap analysis using Machine Learning.",
+      "Implemented blockchain-based certificate verification using Solidity smart contracts & Web3 integration for tamper-resistant academic records.",
+      "Built an interactive Streamlit dashboard for recruitment analytics, candidate evaluation, and cryptographic verification trails.",
     ],
-    stack: ["Python", "Scikit-learn", "Streamlit", "NLP", "Pandas"],
+    stack: ["Python", "Scikit-learn", "NLP", "Solidity", "Web3", "Streamlit", "Pandas", "Blockchain"],
+    github: "https://github.com/Sumeet2005/Smart_resume_analyzer_with_Blockchain_certification",
+    extendedDesc:
+      "This platform combines AI-driven candidate parsing with Web3 blockchain verification. On the AI side, NLP algorithms evaluate resume documents, score ATS keyphrase alignment, and calculate candidate fit against target job roles. On the Blockchain side, the system interacts via Web3 with Solidity smart contracts to perform tamper-resistant certificate verification.",
+    verificationWorkflow: [
+      "Certificate Submitted",
+      "ID Processed",
+      "Web3 Query",
+      "Solidity Smart Contract Verification",
+      "Verified Result",
+    ],
   },
   {
     id: "05",
@@ -187,27 +221,33 @@ export const projects = [
     kicker: "AI-Powered Fraud Detection System",
     category: "Risk & Anomaly Detection",
     summary:
-      "Transaction fraud detection with engineered features and calibrated classification models.",
+      "A machine learning-based fraud detection system designed to identify potentially fraudulent transactions using predictive modeling.",
     features: [
-      "Imbalanced-data handling with resampling and threshold tuning.",
-      "Feature engineering over transactional behaviour.",
-      "Model metrics dashboard for precision/recall tradeoffs.",
+      "Fraud detection using machine learning & predictive classification algorithms.",
+      "Transaction data analysis, preprocessing, feature engineering, and imbalanced data handling.",
+      "Model training, evaluation (precision/recall, ROC/AUC), and real-time fraud risk identification.",
     ],
-    stack: ["Python", "Scikit-learn", "Pandas", "NumPy"],
+    stack: ["Python", "Scikit-learn", "Pandas", "NumPy", "Machine Learning"],
+    github: "https://github.com/Sumeet2005/FraudShield",
+    extendedDesc:
+      "A machine learning-based fraud detection system designed to identify potentially fraudulent transactions using data analysis, preprocessing, feature engineering, and predictive modeling.",
   },
   {
     id: "06",
     name: "Sales Prediction Using Data Science",
-    kicker: "Predictive Analytics",
+    kicker: "Predictive Analytics & Sales Forecasting",
     category: "Forecasting",
     summary:
-      "Regression pipelines forecasting sales performance from historical and campaign data.",
+      "A data science project focused on building a predictive machine learning model to forecast future sales from historical advertising data.",
     features: [
-      "Exploratory analysis and feature selection.",
-      "Regression modelling with cross-validated evaluation.",
-      "Visual reporting of forecast accuracy.",
+      "Data preprocessing, cleaning, and exploratory data analysis (EDA).",
+      "Feature engineering and regression model selection.",
+      "Machine learning model training, cross-validation, and forecast accuracy evaluation.",
     ],
-    stack: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
+    stack: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Jupyter Notebook"],
+    github: "https://github.com/Sumeet2005/Sales-Prediction-using-Data-Science",
+    extendedDesc:
+      "A data science project focused on building a predictive machine learning model to forecast future sales from historical advertising data. The project covers data analysis, preprocessing, visualization, model training, prediction, and performance evaluation.",
   },
   {
     id: "07",
@@ -215,13 +255,16 @@ export const projects = [
     kicker: "Interactive Healthcare Analytics Dashboard",
     category: "Business Intelligence",
     summary:
-      "Interactive analytics dashboard surfacing healthcare operations and outcome metrics.",
+      "An interactive Healthcare Analytics Dashboard developed using Power BI to analyze patient records, billing information, and health trends.",
     features: [
-      "Clean data modelling over healthcare datasets.",
-      "Drill-down views for departments and outcomes.",
-      "KPI tracking with interactive filters.",
+      "KPI cards for Total Billing, Average Billing, and Pending Payments.",
+      "Disease distribution analysis, payment method breakdowns, and monthly patient trends.",
+      "Data cleaning with Power Query, DAX measures, data modeling, and interactive dashboard design.",
     ],
-    stack: ["Power BI", "SQL", "Data Modelling"],
+    stack: ["Power BI", "Power Query", "DAX", "SQL", "Data Modeling", "Excel"],
+    github: "https://github.com/Sumeet2005/HealthCareDashboard-Using-Power-Bi",
+    extendedDesc:
+      "An interactive Healthcare Analytics Dashboard developed using Power BI to analyze patient records, billing information, payment methods, disease distribution, department-wise performance, and patient trends.",
   },
 ];
 
@@ -229,43 +272,103 @@ export const careerTabs = [
   {
     id: "experience",
     label: "01 / Experience",
-    sub: "Data science internship logs",
+    sub: "Data Science Internship Logs",
     verified: "VERIFIED",
     title: "Data Science Intern",
     meta: "CodSoft // Apr 2025 — May 2025",
     facets: [
-      { id: "01 / DATA", label: "Raw Data Processing", report: "Converting dirty transaction files and document lists into normalized records. Handled missing entries, outliers, and feature encoding pipelines." },
-      { id: "02 / ML", label: "Machine Learning Workflows", report: "Built and compared classification and regression baselines, tuning hyperparameters and tracking evaluation metrics across runs." },
-      { id: "03 / NLP", label: "Natural Language Processing", report: "Text cleaning, tokenization and vectorization workflows powering resume and document understanding tasks." },
-      { id: "04 / QUALITY", label: "Testing & Performance Evaluation", report: "Model testing and debugging with F1, AUC and accuracy reporting to validate production readiness." },
+      {
+        id: "01 / DATA",
+        label: "Raw Data Processing & EDA",
+        report:
+          "Applied Machine Learning and NLP techniques to real-world datasets using Python and Scikit-learn. Converted raw transaction files and document lists into normalized records, handling missing entries, outliers, and feature encoding pipelines.",
+      },
+      {
+        id: "02 / ML",
+        label: "Machine Learning Workflows",
+        report:
+          "Engineered end-to-end predictive modeling workflows including data cleaning, preprocessing, feature engineering, exploratory data analysis (EDA), and baseline model training.",
+      },
+      {
+        id: "03 / NLP",
+        label: "Natural Language Processing",
+        report:
+          "Developed tokenization, text parsing, and vectorization procedures. Evaluated skill gaps and keyword densities for automated resume matching and NLP document screening.",
+      },
+      {
+        id: "04 / QUALITY",
+        label: "Testing & Performance Evaluation",
+        report:
+          "Rigorous validation using F1, ROC/AUC, and accuracy metrics to troubleshoot pipeline blocks and validate production readiness.",
+      },
     ],
   },
   {
     id: "education",
     label: "02 / Education",
-    sub: "IT degree records",
+    sub: "Academic Degrees & Schooling",
     verified: "RECORDED",
-    title: "B.Sc. Information Technology",
-    meta: "University of Mumbai // Graduate",
+    title: "Bachelor of Engineering in Information Technology",
+    meta: "Bharati Vidyapeeth College of Engineering, Navi Mumbai // Graduated June 2026 // CGPA: 7.63 / 10",
     facets: [
-      { id: "01 / CORE", label: "Software Engineering", report: "Core coursework across data structures, databases, operating systems and software engineering practice." },
-      { id: "02 / DATA", label: "Databases & SQL", report: "Relational modelling, query optimisation and hands-on work with Oracle SQL, MySQL and PostgreSQL." },
-      { id: "03 / AI", label: "AI Foundations", report: "Machine learning fundamentals, statistics and applied Python for data-driven systems." },
-      { id: "04 / PROJECTS", label: "Applied Capstones", report: "Project-driven learning culminating in full-stack and AI systems delivered end to end." },
+      {
+        id: "01 / BE_IT",
+        label: "B.E. Information Technology",
+        report:
+          "Bharati Vidyapeeth College of Engineering, Navi Mumbai — Graduated June 2026 with 7.63 / 10 CGPA. Core coursework in Software Engineering, AI & Machine Learning, Database Management, and Operating Systems.",
+      },
+      {
+        id: "02 / HSC",
+        label: "Higher Secondary Certificate (HSC)",
+        report:
+          "JSM College, Alibag — Completed March 2022. Focused on Physics, Chemistry, and Mathematics (Science stream).",
+      },
+      {
+        id: "03 / SSC",
+        label: "Secondary School Certificate (SSC)",
+        report:
+          "K.E.S English Medium High School, Alibag — Completed March 2020.",
+      },
+      {
+        id: "04 / CAPSTONES",
+        label: "Applied Engineering Capstones",
+        report:
+          "Delivered end-to-end AI clinical copilot platforms (IntelliICU), Web3 resume & certificate analyzers, and RAG knowledge workspaces during degree studies.",
+      },
     ],
   },
   {
     id: "credentials",
     label: "03 / Credentials",
-    sub: "Oracle & Godrej certificates",
+    sub: "Oracle & Godrej Certifications",
     verified: "CERTIFIED",
-    title: "Certifications",
+    title: "Professional Certifications",
     meta: "Oracle // Godrej",
     facets: [
-      { id: "01 / ORACLE", label: "Oracle Certification", report: "Oracle certification covering SQL and database fundamentals for production data work." },
-      { id: "02 / GODREJ", label: "Godrej Programme", report: "Industry programme certificate covering applied technology and professional engineering practice." },
-      { id: "03 / AI", label: "Applied AI Learning", report: "Continuous self-directed learning across LLM tooling, retrieval systems and agent frameworks." },
-      { id: "04 / DEVOPS", label: "Deployment Practice", report: "Hands-on containerisation, CI pipelines and deployment workflows with Docker and GitHub Actions." },
+      {
+        id: "01 / ORACLE",
+        label: "Programming in Generative AI — Oracle",
+        report:
+          "Oracle Certification in Generative AI (Aug 2025). Validates prompt engineering, LLM architecture principles, and generative model deployment.",
+      },
+      {
+        id: "02 / GODREJ",
+        label: "Data Analytics & Power BI — Godrej",
+        report:
+          "Godrej Certification in Data Analytics & Power BI (Sep 2025). Covers data modeling, DAX measures, Power Query ETL, and interactive executive reporting.",
+      },
+      {
+        id: "03 / AI_LEARNING",
+        label: "Applied GenAI & RAG Orchestration",
+        report:
+          "Continuous self-directed engineering practice across LangChain, LangGraph state machines, ChromaDB hybrid search, and multi-provider LLM integrations.",
+      },
+      {
+        id: "04 / DEVOPS_PRAC",
+        label: "Deployment & Containerization",
+        report:
+          "Hands-on containerization, CI/CD pipelines, and cloud hosting workflows with Docker, GitHub Actions, Nginx, FastAPI, and Railway.",
+      },
     ],
   },
 ];

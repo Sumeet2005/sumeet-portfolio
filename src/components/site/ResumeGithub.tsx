@@ -5,7 +5,7 @@ import { TiltCard } from "@/components/world/TiltCard";
 
 export function ResumeGithub() {
   return (
-    <div className="relative mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
+    <div className="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
       <div className="grid gap-6 lg:grid-cols-2">
         <Reveal>
           <TiltCard as="article" className="holo-panel h-full p-6 sm:p-8">
@@ -52,7 +52,8 @@ export function ResumeGithub() {
               qualifications, and deployments.
             </p>
             <a
-              href={`mailto:${profile.email}?subject=Resume%20request`}
+              href="/Sumeet_Sonar_Resume.pdf"
+              download="Sumeet_Sonar_Resume.pdf"
               className="mt-8 inline-flex items-center gap-2 rounded-xl border border-violet/40 bg-violet/15 px-5 py-3 text-sm font-semibold transition-colors hover:bg-violet/25"
             >
               <Download className="h-4 w-4 shrink-0" aria-hidden />

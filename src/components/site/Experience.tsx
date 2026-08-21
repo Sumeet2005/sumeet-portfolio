@@ -12,7 +12,7 @@ export function Experience() {
   const facet = tab.facets[Math.min(facetIdx, tab.facets.length - 1)]!;
 
   return (
-    <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+    <div className="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
       <Reveal>
         <SectionHeading
           index="06"
@@ -22,9 +22,9 @@ export function Experience() {
         />
       </Reveal>
 
-      <div className="mt-14 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10 lg:items-start">
         <Reveal>
-          <div role="tablist" aria-label="Career records" className="corridor-track grid gap-3" style={{ perspective: "900px" }}>
+          <div role="tablist" aria-label="Career records" className="grid gap-3">
             {careerTabs.map((t) => {
               const selected = t.id === tabId;
               return (
@@ -38,10 +38,10 @@ export function Experience() {
                     setFacetIdx(0);
                   }}
                   style={{
-                    transform: selected ? "translateZ(64px)" : "translateZ(-18px) rotateX(4deg)",
+                    transform: selected ? "translateZ(30px)" : "none",
                     transformStyle: "preserve-3d",
                   }}
-                  className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border p-5 text-left transition-all duration-500 ${
+                  className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-2xl border p-5 text-left transition-all duration-300 ${
                     selected
                       ? "border-cyan/50 bg-cyan/6 glow-ring"
                       : "border-border bg-surface hover:border-cyan/30 hover:bg-surface-raised"
@@ -66,64 +66,66 @@ export function Experience() {
         </Reveal>
 
         <Reveal delay={120}>
-          <TiltCard as="article" className="holo-panel h-full p-6 sm:p-8">
-            <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
-              <span className="truncate">record_view // exp_log</span>
-              <span className="text-accent">{tab.verified}</span>
-            </div>
-
-            <div className="mt-7 flex min-w-0 items-center gap-4">
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-violet/40 bg-violet/12">
-                <Briefcase className="h-5 w-5 text-violet" aria-hidden />
-              </span>
-              <div className="min-w-0">
-                <h3 className="truncate font-display text-xl font-bold uppercase sm:text-2xl">
-                  {tab.title}
-                </h3>
-                <p className="font-mono-tech truncate text-xs text-accent">{tab.meta}</p>
+          <div className="lg:sticky lg:top-24">
+            <TiltCard as="article" className="holo-panel p-6 sm:p-7">
+              <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
+                <span className="truncate">record_view // exp_log</span>
+                <span className="text-accent">{tab.verified}</span>
               </div>
-            </div>
 
-            <div className="mt-7 grid gap-3 sm:grid-cols-2">
-              {tab.facets.map((f, i) => {
-                const selected = i === Math.min(facetIdx, tab.facets.length - 1);
-                return (
-                  <button
-                    key={f.id}
-                    type="button"
-                    onClick={() => setFacetIdx(i)}
-                    aria-pressed={selected}
-                    className={`rounded-xl border p-4 text-left transition-all duration-300 ${
-                      selected
-                        ? "border-cyan/50 bg-cyan/6"
-                        : "border-border bg-surface hover:border-cyan/30"
-                    }`}
-                  >
-                    <span className={`font-mono-tech block text-[11px] ${selected ? "text-accent" : "text-muted-foreground"}`}>
-                      {f.id}
-                    </span>
-                    <span className="font-mono-tech mt-1 block text-xs text-foreground/90">{f.label}</span>
-                  </button>
-                );
-              })}
-            </div>
+              <div className="mt-5 flex min-w-0 items-center gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-violet/40 bg-violet/12">
+                  <Briefcase className="h-5 w-5 text-violet" aria-hidden />
+                </span>
+                <div className="min-w-0">
+                  <h3 className="truncate font-display text-xl font-bold uppercase sm:text-2xl">
+                    {tab.title}
+                  </h3>
+                  <p className="font-mono-tech truncate text-xs text-accent">{tab.meta}</p>
+                </div>
+              </div>
 
-            <div className="mt-7 rounded-xl border border-border bg-surface p-5">
-              <p className="font-mono-tech text-[10px] text-accent uppercase">
-                // inspection_report: {facet.label}
-              </p>
-              <p className="font-mono-tech mt-3 text-sm leading-relaxed text-muted-foreground">
-                {facet.report}
-              </p>
-            </div>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {tab.facets.map((f, i) => {
+                  const selected = i === Math.min(facetIdx, tab.facets.length - 1);
+                  return (
+                    <button
+                      key={f.id}
+                      type="button"
+                      onClick={() => setFacetIdx(i)}
+                      aria-pressed={selected}
+                      className={`rounded-xl border p-3.5 text-left transition-all duration-300 ${
+                        selected
+                          ? "border-cyan/50 bg-cyan/6"
+                          : "border-border bg-surface hover:border-cyan/30"
+                      }`}
+                    >
+                      <span className={`font-mono-tech block text-[11px] ${selected ? "text-accent" : "text-muted-foreground"}`}>
+                        {f.id}
+                      </span>
+                      <span className="font-mono-tech mt-1 block text-xs text-foreground/90">{f.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
 
-            <div className="font-mono-tech mt-7 flex items-center justify-between gap-3 border-t border-border pt-5 text-[10px] text-muted-foreground uppercase">
-              <span className="truncate">data › processing › model › evaluation</span>
-              <span className="flex shrink-0 items-center gap-1.5 text-accent">
-                <Activity className="h-3.5 w-3.5" aria-hidden /> core_run
-              </span>
-            </div>
-          </TiltCard>
+              <div className="mt-5 rounded-xl border border-border bg-surface p-4">
+                <p className="font-mono-tech text-[10px] text-accent uppercase">
+                  // inspection_report: {facet.label}
+                </p>
+                <p className="font-mono-tech mt-2.5 text-sm leading-relaxed text-muted-foreground">
+                  {facet.report}
+                </p>
+              </div>
+
+              <div className="font-mono-tech mt-5 flex items-center justify-between gap-3 border-t border-border pt-4 text-[10px] text-muted-foreground uppercase">
+                <span className="truncate">data › processing › model › evaluation</span>
+                <span className="flex shrink-0 items-center gap-1.5 text-accent">
+                  <Activity className="h-3.5 w-3.5" aria-hidden /> core_run
+                </span>
+              </div>
+            </TiltCard>
+          </div>
         </Reveal>
       </div>
     </div>

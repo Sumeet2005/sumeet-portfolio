@@ -51,16 +51,6 @@ Email: sonarsumeet10@gmail.com
 The final result should feel like a high-end portfolio for AI/Backend/GenAI roles, not a generic template.
 First create the complete website design and structure. Preserve all existing portfolio content from the screenshots.
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/cf3682ae-5f83-49e3-bfd6-48fa30313ca1).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
 ## Development
 
 Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
@@ -71,3 +61,4 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+

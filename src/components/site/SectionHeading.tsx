@@ -27,7 +27,7 @@ export function SectionHeading({
       {description ? (
         <p className="mt-4 text-base text-muted-foreground sm:text-lg">{description}</p>
       ) : null}
-      <div className="mt-8 h-px w-full bg-gradient-to-r from-border to-transparent" />
+      <div className="mt-4 h-px w-full bg-gradient-to-r from-border to-transparent" />
     </div>
   );
 }

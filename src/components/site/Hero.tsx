@@ -1,11 +1,58 @@
+import { useEffect, useState } from "react";
 import { ArrowRight, Bot, Brain, Database, Github, Layers, Linkedin, Mail, Search, Sparkles, Zap } from "lucide-react";
 import { profile, heroStack } from "@/data/portfolio";
 import { Reveal } from "./Reveal";
 import { TiltCard } from "@/components/world/TiltCard";
+import { prefersReducedMotion } from "@/components/world/world-store";
 
 const icons = [Search, Brain, Bot, Database, Layers, Zap];
 
+const rotateTitles = [
+  "Sumeet Sonar",
+  "AI Engineer",
+  "AI & Backend Engineer",
+  "Generative AI Engineer",
+];
+
 export function Hero() {
+  const [titleIdx, setTitleIdx] = useState(0);
+  const [displayText, setDisplayText] = useState(() => (prefersReducedMotion() ? rotateTitles[0]! : ""));
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    if (prefersReducedMotion()) return;
+
+    const currentTarget = rotateTitles[titleIdx]!;
+    let timeoutId: NodeJS.Timeout;
+
+    if (!isDeleting) {
+      // Type character by character
+      if (displayText.length < currentTarget.length) {
+        timeoutId = setTimeout(() => {
+          setDisplayText(currentTarget.slice(0, displayText.length + 1));
+        }, 80);
+      } else {
+        // Finished typing current title, pause before deleting
+        timeoutId = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2200);
+      }
+    } else {
+      // Delete character by character
+      if (displayText.length > 0) {
+        timeoutId = setTimeout(() => {
+          setDisplayText(currentTarget.slice(0, displayText.length - 1));
+        }, 45);
+      } else {
+        // Finished deleting, move to next title
+        setIsDeleting(false);
+        setTitleIdx((prev) => (prev + 1) % rotateTitles.length);
+      }
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [displayText, isDeleting, titleIdx]);
+
   return (
     <div className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
       <div className="grid-bg pointer-events-none absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_at_50%_0%,black,transparent_72%)]" />
@@ -22,8 +69,9 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <p className="font-mono-tech mt-8 text-sm text-violet uppercase">
-              {profile.name} — {profile.role}
+            <p className="font-mono-tech mt-8 text-sm text-violet uppercase flex items-center min-h-[1.5rem]">
+              <span className="inline-inline text-gradient font-bold">{displayText}</span>
+              <span className="ml-0.5 inline-block w-2 bg-accent animate-pulse-soft">&nbsp;</span>
             </p>
             <h1 className="mt-4 text-5xl leading-[0.95] font-bold sm:text-6xl lg:text-7xl">
               Building

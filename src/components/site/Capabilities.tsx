@@ -12,12 +12,12 @@ export function Capabilities() {
   const active = capabilities.find((c) => c.id === activeId)!;
 
   return (
-    <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+    <div className="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
       <Reveal>
         <SectionHeading index="03" kicker="capabilities_core" title="What I Can Build" />
       </Reveal>
 
-      <div className="mt-14 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-10 lg:items-start">
         <Reveal>
           <div role="tablist" aria-label="Capabilities" className="grid gap-3">
             {capabilities.map((c, i) => {
@@ -62,15 +62,16 @@ export function Capabilities() {
         </Reveal>
 
         <Reveal delay={120}>
-          <TiltCard as="article" className="holo-panel h-full p-6 sm:p-8">
-            <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
-              <span className="truncate">capability_logger // inspector</span>
-              <span className="text-accent">engaged</span>
-            </div>
+          <div className="lg:sticky lg:top-24">
+            <TiltCard as="article" className="holo-panel p-6 sm:p-7">
+              <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
+                <span className="truncate">capability_logger // inspector</span>
+                <span className="text-accent">engaged</span>
+              </div>
 
-            <p className="font-mono-tech mt-8 text-[11px] text-accent uppercase">
-              statement / {active.title}
-            </p>
+              <p className="font-mono-tech mt-5 text-[11px] text-accent uppercase">
+                statement / {active.title}
+              </p>
             <h3 className="mt-3 text-xl leading-snug font-bold uppercase sm:text-2xl">
               &ldquo;{active.statement}&rdquo;
             </h3>
@@ -107,11 +108,12 @@ export function Capabilities() {
               </div>
             </div>
 
-            <div className="font-mono-tech mt-8 flex items-center gap-2 text-[10px] text-muted-foreground uppercase">
+            <div className="font-mono-tech mt-6 flex items-center gap-2 text-[10px] text-muted-foreground uppercase">
               <Boxes className="h-3.5 w-3.5" aria-hidden /> core_run
             </div>
           </TiltCard>
-        </Reveal>
+        </div>
+      </Reveal>
       </div>
     </div>
   );

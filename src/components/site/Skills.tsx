@@ -32,12 +32,12 @@ export function Skills() {
   });
 
   return (
-    <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+    <div className="relative mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14">
       <Reveal>
         <SectionHeading index="04" kicker="tech_universe" title="My Technology" accent="Ecosystem" />
       </Reveal>
 
-      <div className="mt-16 grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
+      <div className="mt-6 grid items-start gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
         {/* orbital selector */}
         <Reveal>
           {/* compact spatial selector for small screens */}
