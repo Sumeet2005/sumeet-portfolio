@@ -436,16 +436,6 @@ body {
   overflow-x: clip;
 }
 
-/* keep Z-pushed panels inside the frame on small screens */
-@media (max-width: 860px) {
-  .corridor-track,
-  .stage {
-    perspective: 700px;
-  }
-  .world-viewport {
-    perspective: 1000px;
-  }
-}
 
 /* Mobile / reduced-power fallback world: CSS-perspective corridor */
 .world-static-grid {
