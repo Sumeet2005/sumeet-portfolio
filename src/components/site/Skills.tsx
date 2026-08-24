@@ -112,7 +112,7 @@ export function Skills() {
         {/* constellation detail */}
         <Reveal delay={120}>
           <TiltCard as="article" className="holo-panel p-6 sm:p-8" max={5} lift={22}>
-            <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
+            <div className="font-mono-tech flex flex-wrap items-center justify-between gap-2 text-[10px] text-muted-foreground uppercase">
               <span className="truncate">constellation // {group.title.replace(/\s+/g, "_").toLowerCase()}</span>
               <span className="text-accent">{group.items.length} nodes</span>
             </div>

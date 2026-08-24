@@ -64,7 +64,7 @@ export function Capabilities() {
         <Reveal delay={120}>
           <div className="lg:sticky lg:top-24">
             <TiltCard as="article" className="holo-panel p-6 sm:p-7">
-              <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
+              <div className="font-mono-tech flex flex-wrap items-center justify-between gap-2 text-[10px] text-muted-foreground uppercase">
                 <span className="truncate">capability_logger // inspector</span>
                 <span className="text-accent">engaged</span>
               </div>

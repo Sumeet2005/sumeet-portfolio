@@ -47,11 +47,11 @@ export function Experience() {
                       : "border-border bg-surface hover:border-cyan/30 hover:bg-surface-raised"
                   }`}
                 >
-                  <span className="min-w-0">
-                    <span className="block truncate font-display text-base font-bold uppercase">
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-display text-base font-bold uppercase break-words">
                       {t.label}
                     </span>
-                    <span className="font-mono-tech mt-1 block truncate text-[10px] text-muted-foreground uppercase">
+                    <span className="font-mono-tech mt-1 block text-[10px] text-muted-foreground uppercase break-words">
                       {t.sub}
                     </span>
                   </span>
@@ -67,21 +67,21 @@ export function Experience() {
 
         <Reveal delay={120}>
           <div className="lg:sticky lg:top-24">
-            <TiltCard as="article" className="holo-panel p-6 sm:p-7">
-              <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
-                <span className="truncate">record_view // exp_log</span>
-                <span className="text-accent">{tab.verified}</span>
+            <TiltCard as="article" className="holo-panel p-5 sm:p-7">
+              <div className="font-mono-tech flex flex-wrap items-center justify-between gap-1.5 text-[10px] text-muted-foreground uppercase">
+                <span className="shrink-0">record_view // exp_log</span>
+                <span className="text-accent shrink-0">{tab.verified}</span>
               </div>
 
-              <div className="mt-5 flex min-w-0 items-center gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-violet/40 bg-violet/12">
+              <div className="mt-5 flex min-w-0 items-center gap-3">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-violet/40 bg-violet/12 sm:h-12 sm:w-12">
                   <Briefcase className="h-5 w-5 text-violet" aria-hidden />
                 </span>
-                <div className="min-w-0">
-                  <h3 className="truncate font-display text-xl font-bold uppercase sm:text-2xl">
+                <div className="min-w-0 flex-1">
+                  <h3 className="min-w-0 font-display text-lg font-bold uppercase sm:text-2xl break-words">
                     {tab.title}
                   </h3>
-                  <p className="font-mono-tech truncate text-xs text-accent">{tab.meta}</p>
+                  <p className="font-mono-tech text-xs text-accent break-words">{tab.meta}</p>
                 </div>
               </div>
 
@@ -103,14 +103,14 @@ export function Experience() {
                       <span className={`font-mono-tech block text-[11px] ${selected ? "text-accent" : "text-muted-foreground"}`}>
                         {f.id}
                       </span>
-                      <span className="font-mono-tech mt-1 block text-xs text-foreground/90">{f.label}</span>
+                      <span className="font-mono-tech mt-1 block text-xs text-foreground/90 break-words">{f.label}</span>
                     </button>
                   );
                 })}
               </div>
 
               <div className="mt-5 rounded-xl border border-border bg-surface p-4">
-                <p className="font-mono-tech text-[10px] text-accent uppercase">
+                <p className="font-mono-tech text-[10px] text-accent uppercase break-all">
                   // inspection_report: {facet.label}
                 </p>
                 <p className="font-mono-tech mt-2.5 text-sm leading-relaxed text-muted-foreground">
@@ -118,8 +118,8 @@ export function Experience() {
                 </p>
               </div>
 
-              <div className="font-mono-tech mt-5 flex items-center justify-between gap-3 border-t border-border pt-4 text-[10px] text-muted-foreground uppercase">
-                <span className="truncate">data › processing › model › evaluation</span>
+              <div className="font-mono-tech mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-border pt-4 text-[10px] text-muted-foreground uppercase">
+                <span className="break-words">data › processing › model › evaluation</span>
                 <span className="flex shrink-0 items-center gap-1.5 text-accent">
                   <Activity className="h-3.5 w-3.5" aria-hidden /> core_run
                 </span>

@@ -61,13 +61,13 @@ export function Projects() {
         <Reveal delay={120}>
           <div className="lg:sticky lg:top-24">
             <TiltCard as="article" className="holo-panel flex flex-col p-6 sm:p-7">
-              <div className="font-mono-tech grid grid-cols-[minmax(0,1fr)_auto] gap-3 text-[10px] text-muted-foreground uppercase">
+              <div className="font-mono-tech flex flex-wrap items-center justify-between gap-2 text-[10px] text-muted-foreground uppercase">
                 <span className="truncate">case_study // project_{active.id}</span>
                 <span className="text-accent">log</span>
               </div>
 
               <p className="font-mono-tech mt-5 text-[11px] text-accent uppercase">{active.category}</p>
-              <h3 className="mt-1 font-display text-2xl font-bold uppercase sm:text-3xl">{active.name}</h3>
+              <h3 className="mt-1 font-display text-2xl font-bold uppercase sm:text-3xl break-words">{active.name}</h3>
               <p className="font-mono-tech mt-3 text-sm leading-relaxed text-muted-foreground">
                 {active.summary}
               </p>
@@ -87,9 +87,9 @@ export function Projects() {
                   <p className="font-mono-tech text-[10px] font-bold text-accent uppercase">
                     // verification workflow flowchart
                   </p>
-                  <div className="font-mono-tech mt-2 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
+                  <div className="font-mono-tech mt-2 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground break-words">
                     {active.verificationWorkflow.map((step, idx) => (
-                      <span key={step} className="flex items-center gap-1.5">
+                      <span key={step} className="flex flex-wrap items-center gap-1.5">
                         <span className={idx === active.verificationWorkflow!.length - 1 ? "font-bold text-accent" : ""}>
                           {step}
                         </span>
