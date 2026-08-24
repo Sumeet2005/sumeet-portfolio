@@ -106,7 +106,7 @@ export function Contact() {
                     className="font-mono-tech grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3.5 text-xs uppercase transition-all hover:border-cyan/45 hover:text-accent"
                   >
                     <Icon className="h-4 w-4 shrink-0" aria-hidden />
-                    <span className="truncate">{label}</span>
+                    <span className="truncate break-all">{label}</span>
                     <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />
                   </a>
                 </li>

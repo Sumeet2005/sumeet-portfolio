@@ -32,5 +32,5 @@ export function prefersReducedMotion() {
 
 export function isLowPower() {
   if (typeof window === "undefined") return true;
-  return window.matchMedia("(max-width: 860px)").matches || prefersReducedMotion();
+  return prefersReducedMotion();
 }
