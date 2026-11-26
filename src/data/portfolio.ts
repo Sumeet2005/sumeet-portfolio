@@ -142,6 +142,24 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "01",
+    name: "ClaimSage",
+    kicker: "Agentic AI Insurance Assistant",
+    category: "Agentic AI & Intelligent Workflow Automation",
+    summary:
+      "An Agentic AI platform for insurance claim investigation, combining evidence-grounded document intelligence, LangGraph workflow orchestration, and durable background processing.",
+    features: [
+      "Evidence intelligence: document upload, extraction, chunking, embeddings, and claim-authorized semantic retrieval with PostgreSQL and pgvector.",
+      "LangGraph workflow foundation for structured AI-assisted investigation tasks.",
+      "Durable investigation queue with PostgreSQL-backed worker leases, retry tracking, and background execution.",
+      "FastAPI backend with validated APIs and role-based access controls.",
+    ],
+    stack: ["Agentic AI", "LangGraph", "RAG", "Python", "FastAPI", "PostgreSQL", "pgvector", "React", "TypeScript", "Docker"],
+    github: "https://github.com/Sumeet2005/ClaimSage-v2",
+    extendedDesc:
+      "ClaimSage is an Agentic AI insurance employee assistant focused on health-insurance claim investigation. Its evidence-intelligence workflow ingests claim documents, extracts and chunks their contents, creates embeddings, and retrieves claim-authorized evidence through PostgreSQL with pgvector. LangGraph provides the workflow orchestration foundation, while a PostgreSQL-backed durable investigation queue supports background processing, worker leases, and retry tracking. The application combines a React and TypeScript frontend with a Python FastAPI backend. Its goal is to support investigators with traceable, evidence-grounded information; it does not automatically approve or reject claims.",
+  },
+  {
+    id: "02",
     name: "IntelliICU",
     kicker: "AI Clinical Copilot & Hospital Platform",
     category: "AI Clinical Copilot & Healthcare Platform",
@@ -158,7 +176,7 @@ export const projects: Project[] = [
       "IntelliICU addresses critical healthcare latency issues by feeding active telemetry data directly to full-stack pipelines. The platform coordinates query parsing, chunk overrides, and embedding index validations via secure ChromaDB storage, allowing doctors to get grounded answers scoped to patient records.",
   },
   {
-    id: "02",
+    id: "03",
     name: "Atlas",
     kicker: "AI Knowledge Workspace",
     category: "Agentic Knowledge Workspace",
@@ -175,7 +193,7 @@ export const projects: Project[] = [
       "Atlas is a developer-centric workspace that structures complex files, PDFs, and text scripts into semantic vectors. It combines lexical index scoring (BM25) with dense semantic search blocks to ensure high-accuracy document reranking under low latency.",
   },
   {
-    id: "03",
+    id: "04",
     name: "PharmacoGuard",
     kicker: "AI-Powered Pharmaceutical Complaint Management System",
     category: "Pharma Complaint Intelligence",
@@ -192,7 +210,7 @@ export const projects: Project[] = [
       "PharmacoGuard automates manual risk reviews in regulated setups. It maps incoming tickets through state machines using LangGraph, evaluating complaint severity and duplicate classification, persisting logs securely to PostgreSQL layers.",
   },
   {
-    id: "04",
+    id: "05",
     name: "Smart AI Resume Analyzer with Blockchain Certification",
     kicker: "HR Tech & Web3 Certificate Verification System",
     category: "HR Tech & Blockchain Verification System",
@@ -216,7 +234,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "05",
+    id: "06",
     name: "FraudShield",
     kicker: "AI-Powered Fraud Detection System",
     category: "Risk & Anomaly Detection",
@@ -233,7 +251,7 @@ export const projects: Project[] = [
       "A machine learning-based fraud detection system designed to identify potentially fraudulent transactions using data analysis, preprocessing, feature engineering, and predictive modeling.",
   },
   {
-    id: "06",
+    id: "07",
     name: "Sales Prediction Using Data Science",
     kicker: "Predictive Analytics & Sales Forecasting",
     category: "Forecasting",
@@ -250,7 +268,7 @@ export const projects: Project[] = [
       "A data science project focused on building a predictive machine learning model to forecast future sales from historical advertising data. The project covers data analysis, preprocessing, visualization, model training, prediction, and performance evaluation.",
   },
   {
-    id: "07",
+    id: "08",
     name: "Healthcare Dashboard Using Power BI",
     kicker: "Interactive Healthcare Analytics Dashboard",
     category: "Business Intelligence",
